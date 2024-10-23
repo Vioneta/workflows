@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@v4
       - name: 🚀 Run add-on information action
         id: information
-        uses: frenck/action-addon-information@v1.4.2
+        uses: Vioneta/action-addon-information@v1.4.2
       - name: 🚀 Process possible slug override
         id: override
         run: |
@@ -50,7 +50,7 @@ jobs:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v4
       - name: 🚀 Run Add-on Lint
-        uses: frenck/action-addon-linter@v2.17.1
+        uses: Vioneta/action-addon-linter@v2.17.1
         with:
           community: true
           path: "./${{ needs.information.outputs.target }}"
@@ -97,7 +97,7 @@ jobs:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v4
       - name: 🚀 Run YAMLLint
-        uses: frenck/action-yamllint@v1.5
+        uses: Vioneta/action-yamllint@v1.5
 
   lint-prettier:
     name: Prettier
